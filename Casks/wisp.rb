@@ -7,6 +7,11 @@ cask "wisp" do
   desc "System monitor that groups processes by app"
   homepage "https://wisp-mac.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on arch: :arm64
   depends_on macos: :sequoia
 
